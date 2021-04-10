@@ -12,16 +12,22 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header" align="center">{{ __('AutoParts') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
+                        <div class="alert alert-success" role="alert" >
                             {{ session('status') }}
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ __('Você efetuou o login com sucesso! ') }}
+                    <div align="center">
+    <br>
+<button type="button" class="btn btn-primary"> <a style="color: white" href="{{route('index')}}">Ir para o site!</a></button><br><br>
+   
+</div>
+
                 </div>
             </div>
         </div>

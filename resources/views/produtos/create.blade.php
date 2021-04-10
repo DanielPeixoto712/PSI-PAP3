@@ -14,6 +14,8 @@
 
 <form action="{{route('produtos.store')}}" method="post">
 	@csrf
+
+
 Escolha a Categoria:
 	<select name="id_categoria">
         @foreach($categorias as $categoria)
@@ -31,11 +33,11 @@ Escolha a Marca:
     </select>
 <br><br>
 
-	Marca:<input type="text" name="id_marca" value="{{old('id_marca')}}"><br>
+	Produto :<input type="text" name="produto" value="{{old('produto')}}"><br>
     Preço::<input type="text" name="preco" value="{{old('preco')}}"><br>
 	Observações::<textarea name="observacoes">{{old('observacoes')}}</textarea><br>
 	Informação::<input type="text" name="info" value="{{old('info')}}"><br>
-	Nome do Produto :<input type="text" name="produto" value="{{old('produto')}}"><br>
+	
 	<input type="submit" name="Enviar">
 </form>
 @endsection

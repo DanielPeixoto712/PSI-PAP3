@@ -68,13 +68,15 @@ public function store(request $request){
 }
 
 public function edit (Request $request){
+  $categorias=Categoria::all();
+  $marcas=Marca::all();
+ 
    $idProduto=$request->id;
 
    $produto=Produto::where('id_produto',$idProduto)->first();
  
 
-   return view('produtos.edit',['produto'=>$produto
-]);
+   return view('produtos.edit',['produto'=>$produto, 'categorias'=>$categorias, 'marcas'=>$marcas]);
  
 }
 
