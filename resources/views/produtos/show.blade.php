@@ -44,6 +44,27 @@
             4.0 stars
           </div>
         </div>
+
+
+
+
+
+<div class="card card-outline-secondary my-4">
+          <div class="card-header">
+             Contacto do Vendedor
+          </div>
+          <div class="card-body">
+            
+            <p>{{$produto->contacto}}</p>
+
+            <small class="text-muted">Daniel Peixoto</small>
+            <hr>
+            
+            <a href="#" class="btn btn-success">Ligar</a>
+          </div>
+        </div>
+
+
         <!-- /.card -->
 
         <div class="card card-outline-secondary my-4">
@@ -51,7 +72,7 @@
              Reviews do Produto
           </div>
           <div class="card-body">
-            <p>{{$produto->reciew}}</p>
+            <p>{{$produto->review}}</p>
             <small class="text-muted">Posted by Daniel on 01/03/2021</small>
             <hr>
             <p>{{$produto->observacoes}}</p>

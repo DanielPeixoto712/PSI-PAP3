@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 use App\Models\Produto;
 use App\Models\Marca;
 use App\Models\Categoria;
+
 
 class ProdutosController extends Controller
 {
@@ -68,15 +70,24 @@ public function store(request $request){
 }
 
 public function edit (Request $request){
+    $idProduto=$request->id;
+   $produto=Produto::where('id_produto',$idProduto)->first();
+
+   if(Gate::allows('atualizar-produto', $produto)|| Gate::allows('admin')){
   $categorias=Categoria::all();
   $marcas=Marca::all();
+  
  
-   $idProduto=$request->id;
 
-   $produto=Produto::where('id_produto',$idProduto)->first();
- 
+  
+
 
    return view('produtos.edit',['produto'=>$produto, 'categorias'=>$categorias, 'marcas'=>$marcas]);
+
+   }
+    else{
+      return redirect()->route('index')->with('mensagem','Não tem permissão para aceder á área pretendida');
+    }
  
 }
 

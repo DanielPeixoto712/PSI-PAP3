@@ -71,9 +71,13 @@
 
                   <a href="{{route('produtos.show', ['id'=>$produto->id_produto])}} "class="list-group-item"  >{{$produto->produto}}</a>
                 </h4>
-                <h5>{{$produto->marca->marca}}</h5>
-                <h5>{{$produto->categoria->designacao}}</h5>
-                <h5>{{$produto->preco}} €</h5>
+                <b>Marca: </b> <p>{{$produto->marca->marca}}</p>
+                <hr>
+                <b>Categoria: </b> <p>{{$produto->categoria->designacao}}</p>
+                <hr>
+                <b>Preço: </b><p>{{$produto->preco}} €</p>
+                <hr>
+                <b>Informações: </b>
                 <p class="card-text">{{$produto->info}}</p>
               </div>
               <div class="card-footer">
