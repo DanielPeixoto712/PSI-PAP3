@@ -86,7 +86,7 @@ public function edit (Request $request){
 
    }
     else{
-      return redirect()->route('index')->with('mensagem','Não tem permissão para aceder á área pretendida');
+      return redirect()->route('produtos.index')->with('mensagem','Não tem permissão para editar este anuncio!');
     }
  
 }
@@ -115,9 +115,15 @@ public function delete (request $request){
    $idProduto=$request->id;
    $produto=Produto::where('id_produto',$idProduto)->first();
     $idProduto=$request->id;
+    if(Gate::allows('atualizar-produto', $produto)|| Gate::allows('admin')){
   $produto=Produto::findOrFail($idProduto);
   $produto->delete();
+
 return redirect()->route('produtos.index')->with('mensagem','Produto Eliminado com Sucesso!');
+}
+    else{
+      return redirect()->route('produtos.index')->with('mensagem','Não tem permissão para remover este anuncio!');
+    }
 
 }
 
