@@ -29,7 +29,7 @@ class AuthServiceProvider extends ServiceProvider
        
 
        Gate::define('atualizar-produto', function($user, $produto){
-        return $user->id==$produto->id_user;
+        return $user->id==$produto->id;
 
        });
        
