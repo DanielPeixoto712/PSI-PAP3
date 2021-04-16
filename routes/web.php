@@ -41,7 +41,7 @@ Route::get('/produtos/create', 'App\Http\Controllers\ProdutosController@create')
 Route::post('/produtos', 'App\Http\Controllers\ProdutosController@store')->name('produtos.store')->middleware('auth');
 Route::get('/produtos/{id}/showMarca', 'App\Http\Controllers\ProdutosController@showMarca')->name('produtos.showMarca')->middleware('auth');
 
-Route::get('/produtos/edit', 'App\Http\Controllers\ProdutosController@edit')->name('produtos.edit')->middleware('auth');
+Route::get('/produtos/edit/{id}', 'App\Http\Controllers\ProdutosController@edit')->name('produtos.edit')->middleware('auth');
 Route::patch('/produtos', 'App\Http\Controllers\ProdutosController@update')->name('produtos.update')->middleware('auth');
 Route::get('/produtos/delete', 'App\Http\Controllers\ProdutosController@delete')->name('produtos.delete')->middleware('auth');
 Route::delete('/produtos', 'App\Http\Controllers\ProdutosController@destroy')->name('produtos.destroy')->middleware('auth');

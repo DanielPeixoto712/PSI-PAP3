@@ -23,7 +23,7 @@
 
 @section ('produtos')
 <div align="center">
-        <a href="{{route('produtos.edit')}}"><button type="button" class="btn btn-outline-primary">Editar</button></a>
+        <a href="{{route('produtos.edit', ['id'=>$produto->id_produto])}}"><button type="button" class="btn btn-outline-primary">Editar</button></a>
        <a href="{{route('produtos.delete',['id'=>$produto->id_produto])}}"><button type="button" class="btn btn-outline-primary">Apagar</a>
 </div><br>
     

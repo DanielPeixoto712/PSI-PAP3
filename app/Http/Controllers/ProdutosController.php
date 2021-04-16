@@ -72,7 +72,7 @@ public function store(request $request){
 public function edit (Request $request){
     $idProduto=$request->id;
    $produto=Produto::where('id_produto',$idProduto)->first();
-
+//dd($produto);
    if(Gate::allows('atualizar-produto', $produto)|| Gate::allows('admin')){
   $categorias=Categoria::all();
   $marcas=Marca::all();
@@ -115,6 +115,7 @@ public function delete (request $request){
    $idProduto=$request->id;
    $produto=Produto::where('id_produto',$idProduto)->first();
     $idProduto=$request->id;
+
     if(Gate::allows('atualizar-produto', $produto)|| Gate::allows('admin')){
   $produto=Produto::findOrFail($idProduto);
   $produto->delete();

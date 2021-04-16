@@ -26,14 +26,14 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
         //
 
-       /**
+       
 
        Gate::define('atualizar-produto', function($user, $produto){
         return $user->id==$produto->id_user;
 
        });
        
-       */
+       
 
         Gate::define('admin', function($user){
             if($user->tipo_user=='admin'){

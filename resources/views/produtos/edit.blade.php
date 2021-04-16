@@ -17,7 +17,7 @@
 	@csrf
 @method('patch')
 
-<form action="{{route('produtos.edit')}}" method="get">
+<form action="{{route('produtos.update')}}" method="get">
 
 	Escolha a Categoria:
 	<select name="id_categoria">
