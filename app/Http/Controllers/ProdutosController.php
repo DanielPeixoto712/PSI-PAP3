@@ -61,9 +61,13 @@ public function store(request $request){
         'produto'=>['nullable','min:2','max:200'],
         'observacoes'=>['nullable','min:2','max:200'],
         'info'=>['nullable','min:2','max:200'],
+        'id'=>['nullable','required','min:1','max:50']
 
 
 ]);
+
+
+
     $produto=Produto::create($novoProduto);
     return redirect()->route('produtos.show',[
         'id'=>$produto->id_produto]);
@@ -103,6 +107,7 @@ public function edit (Request $request){
         'produto'=>['nullable','min:2','max:200'],
         'observacoes'=>['nullable','min:2','max:200'],
         'info'=>['nullable','min:2','max:200'],
+        'id'=>['nullable','required','min:1','max:50']
 ]);
    $produto->update($atualizarProduto);
 

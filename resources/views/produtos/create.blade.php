@@ -37,6 +37,8 @@ Escolha a Marca:
     Preço::<input type="text" name="preco" value="{{old('preco')}}"><br>
 	Observações::<textarea name="observacoes">{{old('observacoes')}}</textarea><br>
 	Informação::<input type="text" name="info" value="{{old('info')}}"><br>
+   <input type="text" name="id"  value="{{Auth::user()->id}}"  style="display:none" />{{Auth::user()->id}} <br>
+
 	
 	<input type="submit" name="Enviar">
 </form>
