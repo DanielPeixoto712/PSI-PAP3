@@ -18,7 +18,8 @@ class Produto extends Model
        'preco',
        'observacoes',
        'info',
-       'id'
+       'id',
+       'imagem_capa'
    ];
 
 

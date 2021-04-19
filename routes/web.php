@@ -49,3 +49,6 @@ Route::delete('/produtos', 'App\Http\Controllers\ProdutosController@destroy')->n
 //Categorias
 Route::get('/categorias', 'App\Http\Controllers\CategoriasController@index')->name('categorias.index')->middleware('auth');
 Route::get('/categorias/{id}/show', 'App\Http\Controllers\CategoriasController@show')->name('categorias.show')->middleware('auth');
+
+//Sobre
+Route::get('/sobre', 'App\Http\Controllers\SobreController@index')->name('sobre')->middleware('auth');

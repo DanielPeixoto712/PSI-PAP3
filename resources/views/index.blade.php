@@ -48,7 +48,7 @@
 <div class="row">
 <div class="col-md-3 offset-md-1">
           <div  class="card" style="width: 18rem;" >
-  <img class="card-img-top" src="img/omp2.jpg" alt="Imagem de capa do card">
+  <img class="card-img-top" src="img/susp2.jpg" alt="Imagem de capa do card">
   <div class="card-body">
     <h5 class="card-title">Temos vários volantes!</h5>
     <p class="card-text">Para todos os gostos!</p>
@@ -60,7 +60,7 @@
 <div class="col-md-3 offset-md-1">
 
 <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="img/omp2.jpg" alt="Imagem de capa do card">
+  <img class="card-img-top" src="img/sparco1.jpg" alt="Imagem de capa do card">
   <div class="card-body">
     <h5 class="card-title">teste</h5>
     <p class="card-text">trs</p>

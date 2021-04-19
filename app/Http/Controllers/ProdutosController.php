@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Produto;
 use App\Models\Marca;
 use App\Models\Categoria;
@@ -41,12 +42,7 @@ public function showMarca (Request $request){
 }
     
 
-    
-    
-    
-    
-    
-    
+
 public function create(){
   $categorias=Categoria::all();
   $marcas=Marca::all();
@@ -61,11 +57,17 @@ public function store(request $request){
         'produto'=>['nullable','min:2','max:200'],
         'observacoes'=>['nullable','min:2','max:200'],
         'info'=>['nullable','min:2','max:200'],
-        'id'=>['nullable','required','min:1','max:50']
+        'id'=>['nullable','required','min:1','max:50'],
+        'imagem_capa'=>['image','nullable','max:2000']
 
 
 ]);
-
+if($request->hasFile('imagem_capa')){
+  $nomeimagem=$request->file('imagem_capa')->getClientOriginalName();
+  $nomeimagem=time().'_'.$nomeimagem;
+  $guardarimagem=$request->file('imagem_capa')->storeAs('imagens/produtos',$nomeimagem);
+  $novoProduto['imagem_capa']=$nomeimagem;
+}
 
 
     $produto=Produto::create($novoProduto);
@@ -99,7 +101,7 @@ public function edit (Request $request){
    public function update(Request $request){
    $idProduto=$request->id;
    $produto=Produto::findOrfail($idProduto);
-
+   $imagemantiga=$produto->imagem_capa;
    $atualizarProduto=$request->validate([
     'id_categoria'=>['required','max:100'],
         'id_marca'=>['required','max:100'],
@@ -107,8 +109,19 @@ public function edit (Request $request){
         'produto'=>['nullable','min:2','max:200'],
         'observacoes'=>['nullable','min:2','max:200'],
         'info'=>['nullable','min:2','max:200'],
-        'id'=>['nullable','required','min:1','max:50']
+        'id'=>['nullable','required','min:1','max:50'],
+        'imagem_capa'=>['image','nullable','max:2000']
 ]);
+   if($request->hasFile('imagem_capa')){
+  $nomeimagem=$request->file('imagem_capa')->getClientOriginalName();
+  $nomeimagem=time().'_'.$nomeimagem;
+  $guardarimagem=$request->file('imagem_capa')->storeAs('imagens/produtos',$nomeimagem);
+if(!is_null($imagemantiga)){
+  Storage::Delete('imagens/produtos'.$imagemantiga);
+}
+
+  $atualizarproduto['imagem_capa']=$nomeimagem;
+}
    $produto->update($atualizarProduto);
 
   return redirect()->route('produtos.show', ['id'=>$produto->id_produto

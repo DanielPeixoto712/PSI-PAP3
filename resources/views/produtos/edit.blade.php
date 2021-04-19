@@ -14,13 +14,13 @@
 <br><br><br><br><br>
 @section ('produtos')
 
-	@csrf
+    @csrf
 @method('patch')
 
-<form action="{{route('produtos.update')}}" method="get">
+<form action="{{route('produtos.update')}}" enctype="multipart/form-data" method="get">
 
-	Escolha a Categoria:
-	<select name="id_categoria">
+    Escolha a Categoria:
+    <select name="id_categoria">
         @foreach($categorias as $categoria)
         <option value="{{$categoria->id_categoria}}">{{$categoria->designacao}}</option>
         @endforeach
@@ -36,11 +36,16 @@ Escolha a Marca:
     </select>
 <br><br>
 
-	Produto :<input type="text" name="produto" value="{{old('produto')}}"><br>
-    Preço::<input type="text" name="preco" value="{{old('preco')}}"><br>
-	Observações::<textarea name="observacoes">{{old('observacoes')}}</textarea><br>
-	Informação::<input type="text" name="info" value="{{old('info')}}"><br>
-	<input type="submit" name="Enviar">
+    Produto :<input type="text" name="produto" value="{{old('produto')}}"><br>
+    Preço:<input type="text" name="preco" value="{{old('preco')}}"><br>
+    Observações:<textarea name="observacoes">{{old('observacoes')}}</textarea><br>
+    Informação:<input type="text" name="info" value="{{old('info')}}"><br>
+    <label>Imagem Capa</label><br>
+<input type="file" name="imagem_capa">
+    @if($errors->has('imagem_capa'))
+    Verigique se introduziu a imagem corretamente.<br>
+    @endif
+    <input type="submit" name="Enviar">
 </form>
 @endsection
 

@@ -26,14 +26,14 @@
         <a href="{{route('produtos.edit', ['id'=>$produto->id_produto])}}"><button type="button" class="btn btn-outline-primary">Editar</button></a>
        <a href="{{route('produtos.delete',['id'=>$produto->id_produto])}}"><button type="button" class="btn btn-outline-primary">Apagar</a>
 </div><br>
-    
-
-
+<!--    @if(isset($produto->imagem_capa))
+<img src="{{asset('imagens/produtos/'.$produto->imagem_capa)}}">
+@endif-->
 
 <div class="col-lg-9">
 
         <div class="card mt-4">
-          <img class="card-img-top img-fluid" src="{{asset('img/1jz.jpg')}}" alt="">
+          <img class="card-img-top img-fluid" src="{{asset('imagens/produtos/'.$produto->imagem_capa)}}" alt="">
           <div class="card-body">
             <h3 class="card-title"></h3>
             <h5>{{$produto->preco}}
@@ -95,21 +95,3 @@
 
 
 @endsection
-
-
-
-
-
-
-<br>
-<br><br><br>
-
-
-
-
-
-
-
-
-
-
