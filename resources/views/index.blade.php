@@ -52,7 +52,6 @@
   <div class="card-body">
     <h5 class="card-title">Temos vários volantes!</h5>
     <p class="card-text">Para todos os gostos!</p>
-    <a href="" target="blank" class="btn btn-primary">Visitar</a>
   </div>
 </div>
 </div>
@@ -62,20 +61,20 @@
 <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="img/sparco1.jpg" alt="Imagem de capa do card">
   <div class="card-body">
-    <h5 class="card-title">teste</h5>
-    <p class="card-text">trs</p>
-    <a href="https://www.google.pt/maps/place/Grandes+Planos+S.A./@41.3417066,-8.4791091,17z/data=!3m1!4b1!4m5!3m4!1s0xd24f58e776d1e03:0xda5ef49273bb8e1f!8m2!3d41.3417066!4d-8.4769204" target="blank" class="btn btn-primary">Visitar</a>
+    <h5 class="card-title">Temos vários volantes!</h5>
+    <p class="card-text">Para todos os gostos!</p>
+   
   </div>
 </div>
 </div>
 
 <div class="col-md-3 offset-md-1">
 <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="img/2jj.jpg" alt="Imagem de capa do card">
+  <img class="card-img-top" src="img/bomp1.jpg" alt="Imagem de capa do card">
   <div class="card-body">
     <h5 class="card-title">Aqui encontra o motor que procura!</h5>
     <p class="card-text">Procure aqui!</p>
-    <a href="" target="blank" class="btn btn-primary">Visitar</a>
+    
   </div>
 </div>
 </div>

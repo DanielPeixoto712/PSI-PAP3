@@ -53,12 +53,12 @@ public function store(request $request){
     $novoProduto=$request->validate ([
         'id_categoria'=>['required','max:100'],
         'id_marca'=>['required','max:100'],
-        'preco'=>['nullable','min:2','max:200'],
+        'preco'=>['nullable','min:2','max:10000000'],
         'produto'=>['nullable','min:2','max:200'],
-        'observacoes'=>['nullable','min:2','max:200'],
+        'observacoes'=>['nullable','min:2','max:20000000'],
         'info'=>['nullable','min:2','max:200'],
         'id'=>['nullable','required','min:1','max:50'],
-        'imagem_capa'=>['image','nullable','max:2000']
+        'imagem_capa'=>['image','nullable','max:20000']
 
 
 ]);
@@ -78,7 +78,7 @@ if($request->hasFile('imagem_capa')){
 public function edit (Request $request){
     $idProduto=$request->id;
    $produto=Produto::where('id_produto',$idProduto)->first();
-//dd($produto);
+
    if(Gate::allows('atualizar-produto', $produto)|| Gate::allows('admin')){
   $categorias=Categoria::all();
   $marcas=Marca::all();
