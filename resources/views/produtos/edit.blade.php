@@ -14,11 +14,11 @@
 <br><br><br><br><br>
 @section ('produtos')
 
-    @csrf
-@method('patch')
+ 
 
 <form action="{{route('produtos.update')}}" enctype="multipart/form-data" method="get">
-
+   @csrf
+@method('patch')
     Escolha a Categoria:
     <select name="id_categoria">
         @foreach($categorias as $categoria)

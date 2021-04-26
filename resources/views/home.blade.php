@@ -25,6 +25,7 @@
                     <div align="center">
     <br>
 <button type="button" class="btn btn-primary"> <a style="color: white" href="{{route('index')}}">Ir para o site!</a></button><br><br>
+
    
 </div>
 

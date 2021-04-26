@@ -8,12 +8,12 @@
 
 
 
-
 @section ('titulo')
 
 @endsection
 
 @section ('navbar')
+
 
 @endsection
 
@@ -27,7 +27,6 @@
         <a href="{{route('produtos.edit', ['id'=>$produto->id_produto])}}"><button type="button" class="btn btn-outline-primary">Editar</button></a>
        <a href="{{route('produtos.delete',['id'=>$produto->id_produto])}}"><button type="button" class="btn btn-outline-primary">Apagar</a>
 </div><br>
-
 
 <div class="col-lg-9">
 
@@ -49,20 +48,24 @@
 
 
 
-<div class="card card-outline-secondary my-4">
+<div  class="card card-outline-secondary my-4">
           <div class="card-header">
              Contacto do Vendedor
           </div>
           <div class="card-body">
-            
-            <p>{{$produto->contacto}}</p>
+          
+            <p>{{$produto->users->contacto}}</p>
+         
 
-            <small class="text-muted">Daniel Peixoto</small>
+            <small class="text-muted">{{$produto->users->name}}</small>
             <hr>
             
             <a href="#" class="btn btn-success">Ligar</a>
           </div>
         </div>
+
+
+
 
 
         <!-- /.card -->
@@ -90,6 +93,8 @@
       <!-- /.col-lg-9 -->
 
     </div>
+
+
 
   </div>
 

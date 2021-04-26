@@ -34,7 +34,7 @@ class Produto extends Model
       return $this->belongsTo('App\Models\Categoria', 'id_categoria');
     }
 
-       public function user (){
+       public function users (){
 
       return $this->belongsTo('App\Models\User', 'id');
     }
