@@ -50,15 +50,17 @@
 
 <div  class="card card-outline-secondary my-4">
           <div class="card-header">
-             Contacto do Vendedor
+             Informações do Vendedor
           </div>
           <div class="card-body">
-          
-            <p>{{$produto->users->contacto}}</p>
-         
 
-            <small class="text-muted">{{$produto->users->name}}</small>
-            <hr>
+          <p> <li>Nome do vendedor</li>{{$produto->users->name}}</p>
+          <hr>
+          <p><li>Contacto do vendedor</li> {{$produto->users->contacto}}</p>
+          <hr>
+
+          
+           
             
             <a href="#" class="btn btn-success">Ligar</a>
           </div>
@@ -72,19 +74,19 @@
 
         <div class="card card-outline-secondary my-4">
           <div class="card-header">
-             Reviews do Produto
+             Avaliações do vendedor
           </div>
           <div class="card-body">
-            <p>{{$produto->review}}</p>
+            <p>avaliação1</p>
             <small class="text-muted">Posted by Daniel on 01/03/2021</small>
             <hr>
-            <p>{{$produto->observacoes}}</p>
+            <p>avaliação2</p>
             <small class="text-muted">Posted by Anonymous on 3/1/17</small>
             <hr>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
             <small class="text-muted">Posted by Anonymous on 3/1/17</small>
             <hr>
-            <a href="#" class="btn btn-success">Fazer Review</a>
+            <a href="#" class="btn btn-success">Avaliar</a>
           </div>
         </div>
         <!-- /.card -->
