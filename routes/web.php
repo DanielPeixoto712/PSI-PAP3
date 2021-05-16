@@ -52,3 +52,6 @@ Route::get('/categorias/{id}/show', 'App\Http\Controllers\CategoriasController@s
 
 //Sobre
 Route::get('/sobre', 'App\Http\Controllers\SobreController@index')->name('sobre')->middleware('auth');
+
+//Admin
+Route::get('/admins', 'App\Http\Controllers\AdminsController@index')->name('admins.index')->middleware('auth');

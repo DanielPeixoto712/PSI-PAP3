@@ -46,6 +46,10 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Contactos</a>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('admins.index')}}">Admin</a>
+          </li>
          
 
         </ul>
@@ -132,6 +136,7 @@
   <!-- /.container -->
 
   <!-- Footer -->
+</div></div>
   @yield('rodape')
   <footer class="py-5 bg-dark">
     <div class="container">

@@ -19,6 +19,7 @@ class ProdutosController extends Controller
        //$produto=Produto::where('id_produto',$idProduto)->with(['marca','categoria'])->first();
      $marcas=Marca::all();
 
+
        return view('produtos.index', ['produto'=>$produtos, 'marca'=>$marcas
    ]);
 
@@ -27,6 +28,10 @@ class ProdutosController extends Controller
         $idProduto=$request->id;
         $produto=Produto::where('id_produto',$idProduto)->with(['marca','categoria'])->first();
         $marcas=Marca::all();
+         
+       
+
+            
 
     return view('produtos.show',  ['produto'=>$produto,'marca'=>$marcas
 ]);
@@ -138,7 +143,7 @@ public function delete (request $request){
   $produto=Produto::findOrFail($idProduto);
   $produto->delete();
 
-return redirect()->route('produtos.index')->with('mensagem','Produto Eliminado com Sucesso!');
+return redirect()->route('produtos.index')->with('mensagem','Anuncio Eliminado com Sucesso!');
 }
     else{
       return redirect()->route('produtos.index')->with('mensagem','Não tem permissão para remover este anuncio!');
