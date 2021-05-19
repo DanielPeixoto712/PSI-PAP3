@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Models\Produto;
 use App\Models\Marca;
 use App\Models\Categoria;
+use App\Models\User;
 
 
 class ProdutosController extends Controller
@@ -108,14 +109,14 @@ public function edit (Request $request){
    $produto=Produto::findOrfail($idProduto);
    $imagemantiga=$produto->imagem_capa;
    $atualizarProduto=$request->validate([
-    'id_categoria'=>['required','max:100'],
+       'id_categoria'=>['required','max:100'],
         'id_marca'=>['required','max:100'],
-        'preco'=>['nullable','min:2','max:200'],
+        'preco'=>['nullable','min:2','max:10000000'],
         'produto'=>['nullable','min:2','max:200'],
-        'observacoes'=>['nullable','min:2','max:200'],
+        'observacoes'=>['nullable','min:2','max:20000000'],
         'info'=>['nullable','min:2','max:200'],
         'id'=>['nullable','required','min:1','max:50'],
-        'imagem_capa'=>['image','nullable','max:2000']
+        'imagem_capa'=>['image','nullable','max:20000']
 ]);
    if($request->hasFile('imagem_capa')){
   $nomeimagem=$request->file('imagem_capa')->getClientOriginalName();
@@ -148,6 +149,19 @@ return redirect()->route('produtos.index')->with('mensagem','Anuncio Eliminado c
     else{
       return redirect()->route('produtos.index')->with('mensagem','Não tem permissão para remover este anuncio!');
     }
+
+}
+public function admins (request $request){
+
+ return view('produtos.admins');
+
+}
+
+public function users (request $request){
+
+$users= User::all();
+
+ return view('produtos.users')->with('users', $users);
 
 }
 

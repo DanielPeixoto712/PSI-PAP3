@@ -14,8 +14,8 @@ class Produto extends Model
    protected $fillable=[
        'id_categoria',
        'id_marca',
-       'produto',
        'preco',
+       'produto',
        'observacoes',
        'info',
        'id',

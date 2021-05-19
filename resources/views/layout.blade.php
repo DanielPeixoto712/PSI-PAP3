@@ -48,7 +48,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="{{route('admins.index')}}">Admin</a>
+            <a class="nav-link" href="{{route('produtos.admins')}}">Admin</a>
           </li>
          
 

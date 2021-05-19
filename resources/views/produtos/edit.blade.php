@@ -36,8 +36,8 @@ Escolha a Marca:
     </select>
 <br><br>
 
-    Produto :<input type="text" name="produto" value="{{$produto->produto}}"><br>
     Preço:<input type="text" name="preco" value="{{$produto->preco}}"><br>
+    Produto :<input type="text" name="produto" value="{{$produto->produto}}"><br>
     Observações:<textarea name="observacoes">{{$produto->observacoes}}</textarea><br>
     Informação:<input type="text" name="info" value="{{$produto->info}}"><br>
     <label>Imagem Capa</label><br>
@@ -52,3 +52,4 @@ Escolha a Marca:
 
 @section ('rodape')
 @endsection
+
