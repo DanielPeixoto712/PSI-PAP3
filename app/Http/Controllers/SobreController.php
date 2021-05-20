@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Marca;
+//use App\Models\Marca;
 
-class MarcasController extends Controller
+class SobreController extends Controller
 {
  public function index(){
      
