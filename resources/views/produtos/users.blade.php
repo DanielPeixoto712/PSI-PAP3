@@ -10,50 +10,63 @@
 @endsection
 
 @section ('produtos')
- 
-<table>
-	<thead>
-		<tr>
-			<th>
-				ID
-			</th>
-		
+ <table border cellpadding= “1” cellpacing= “0” height =”200”>
+ 	<thead>
+ 		<tr>
+ 			<th>
+ 				ID
+ 			</th>
+ 			<th>
+ 				Nome
+ 			</th>
+ 			<th>
+ 				Contacto
+ 			</th>
+ 			<th>
+ 				Email
+ 			</th>
+ 			<th>
+ 				Permissões
+ 			</th>
+ 			<th>
+ 				Data Criação 
+ 			</th>
+
+ 		</tr>
+ 	</thead>
 
 
+ 	<tbody>
+ 		@foreach($users as $u)
+ 		<tr>
+ 			<td>
+ 				{{$u->id}}
+ 			</td>
 
+ 			<td>
+ 				{{$u->name}}
+ 			</td>
 
-	
-			<th>
-				Nome
-			</th>
-		
+ 			<td>
+ 				{{$u->contacto}}
+ 			</td>
 
+ 			<td>
+ 				{{$u->email}}
+ 			</td>
 
-		
-			<th>
-				Contacto
-			</th>
-		</tr>
- 
+ 			<td>
+ 				<h6 style="color: #04B404">{{$u->tipo_user}}</h6>
+ 			</td>
+
+ 			<td>
+ 				{{$u->created_at}}
+ 			</td>
+
+ 		</tr>
+ 		@endforeach
  	</tbody>
-	</thead>
-	@foreach($users as $u)
-	<tr>
-	<td>{{$u->id}}</td>
-	</tr>
-
-
-	<tr>
-	<td>{{$u->name}}</td>
-	</tr>
-
-
-	<tr>
-	<td>{{$u->contacto}}</td>
-	</tr>
-	@endforeach
-</table> 
-
+ </table>
 
 @endsection
 
