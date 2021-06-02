@@ -53,7 +53,11 @@ Route::get('/categorias/{id}/show', 'App\Http\Controllers\CategoriasController@s
 //Sobre
 Route::get('/sobre', 'App\Http\Controllers\SobreController@index')->name('sobre')->middleware('auth');
 
-//Admin
-Route::get('/produtos/admins', 'App\Http\Controllers\ProdutosController@admins')->name('produtos.admins')->middleware('auth');
 
+//Admins//
+Route::get('/produtos/admins', 'App\Http\Controllers\ProdutosController@admins')->name('produtos.admins')->middleware('auth');
+//Users
 Route::get('/produtos/users', 'App\Http\Controllers\ProdutosController@users')->name('produtos.users')->middleware('auth');
+
+//Anuncios
+Route::get('/produtos/anuncios', 'App\Http\Controllers\ProdutosController@anuncios')->name('produtos.anuncios')->middleware('auth');

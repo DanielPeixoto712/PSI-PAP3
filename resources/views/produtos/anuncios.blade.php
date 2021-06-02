@@ -17,50 +17,70 @@
  				ID
  			</th>
  			<th>
- 				Nome
+ 				Produto
  			</th>
  			<th>
- 				Contacto
+ 				Anunciante
  			</th>
  			<th>
  				Email
  			</th>
- 			<th>
- 				Permissões
- 			</th>
+ 			
  			<th>
  				Conta criada em
  			</th>
+ 			<th>
+ 				Preço
+ 			</th>
+
+ 			<th>
+ 				Marca
+ 			</th>
+
+ 			<th>
+ 				Designação
+ 			</th>
+
 
  		</tr>
  	</thead>
 
 
  	<tbody>
- 		@foreach($users as $u)
+ 		@foreach($produtos as $u)
  		<tr>
  			<td>
  				{{$u->id}}
  			</td>
 
  			<td>
- 				{{$u->name}}
+ 				{{$u->produto}}
  			</td>
 
  			<td>
- 				{{$u->contacto}}
+ 				{{$u->users->name}} 
  			</td>
 
  			<td>
- 				{{$u->email}}
+ 				{{$u->users->contacto}}
  			</td>
 
- 			<td>
- 				<h6 style="color: #04B404">{{$u->tipo_user}}</h6>
- 			</td>
+ 			
 
  			<td>
  				{{$u->created_at}}
+ 			</td>
+
+ 			<td>
+ 				{{$u->preco}} €
+ 			</td>
+
+ 			<td>
+ 				{{$u->marca->marca}}
+ 			</td>
+
+ 			<td>
+ 				{{$u->categoria->designacao}}
  			</td>
 
  		</tr>

@@ -39,4 +39,12 @@ class Produto extends Model
       return $this->belongsTo('App\Models\User', 'id');
     }
 
+    public function anuncios (){
+
+      return $this->belongsTo('App\Models\Anuncio', 'id_produto');
+    }
+
+
+
+
     }

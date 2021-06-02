@@ -9,6 +9,7 @@ use App\Models\Produto;
 use App\Models\Marca;
 use App\Models\Categoria;
 use App\Models\User;
+use App\Models\Anuncio;
 
 
 class ProdutosController extends Controller
@@ -162,6 +163,14 @@ public function users (request $request){
 $users= User::all();
 
  return view('produtos.users')->with('users', $users);
+
+}
+
+public function anuncios (request $request){
+
+$produtos= Produto::all();
+
+ return view('produtos.anuncios')->with('produtos', $produtos);
 
 }
 
