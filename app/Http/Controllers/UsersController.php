@@ -11,6 +11,7 @@ use App\Models\Marca;
 use App\Models\Categoria;
 use App\Models\User1;
 use App\Models\User;
+use App\Models\Anuncio;
 
 class UsersController extends Controller
 {

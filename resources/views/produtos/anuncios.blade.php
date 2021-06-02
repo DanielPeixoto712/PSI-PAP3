@@ -10,11 +10,19 @@
 @endsection
 
 @section ('produtos')
+
+
  <table border cellpadding= “1” cellpacing= “0” height =”200”>
+ 	<h3>Tabela dos Anuncios</h3>
  	<thead>
  		<tr>
+
  			<th>
- 				ID
+ 				ID anuncio
+ 			</th>
+
+ 			<th>
+ 				ID Anunciante
  			</th>
  			<th>
  				Produto
@@ -49,6 +57,10 @@
  	<tbody>
  		@foreach($produtos as $u)
  		<tr>
+ 			 <td>
+ 				{{$u->id_produto}}
+ 			</td>
+
  			<td>
  				{{$u->id}}
  			</td>
