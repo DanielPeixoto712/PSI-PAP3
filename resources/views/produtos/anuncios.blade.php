@@ -31,12 +31,13 @@
  				Anunciante
  			</th>
  			<th>
+ 				Contacto
+ 			</th>
+
+ 			<th>
  				Email
  			</th>
  			
- 			<th>
- 				Conta criada em
- 			</th>
  			<th>
  				Preço
  			</th>
@@ -46,7 +47,11 @@
  			</th>
 
  			<th>
- 				Designação
+ 				Categoria
+ 			</th>
+
+ 			<th>
+ 				Conta criada em
  			</th>
 
 
@@ -77,11 +82,13 @@
  				{{$u->users->contacto}}
  			</td>
 
+ 			<td>
+ 				{{$u->users->email}}
+ 			</td>
+
  			
 
- 			<td>
- 				{{$u->created_at}}
- 			</td>
+ 			
 
  			<td>
  				{{$u->preco}} €
@@ -93,6 +100,10 @@
 
  			<td>
  				{{$u->categoria->designacao}}
+ 			</td>
+
+ 			<td>
+ 				{{$u->created_at}}
  			</td>
 
  		</tr>

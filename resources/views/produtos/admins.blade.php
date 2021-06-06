@@ -26,13 +26,13 @@
                     <div class="row">
                         <div class="col-xs-6 col-md-6">
                           <a href="{{route('produtos.anuncios')}}" class="btn btn-danger btn-lg" role="button"><span class="glyphicon glyphicon-list-alt"></span> Anuncios</a><br><br>
-                          <a href="#" class="btn btn-warning btn-lg" role="button"><span class="glyphicon glyphicon-bookmark"></span> Bookmarks</a><br><br>
+                          <a href="" class="btn btn-warning btn-lg" role="button"><span class="glyphicon glyphicon-bookmark"></span> Marcas</a><br><br>
                           <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-signal"></span> Reports</a><br><br>
                           <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-comment"></span> Comments</a><br>
                         </div>
                         <div class="col-xs-6 col-md-6">
                           <a href="{{route('produtos.users')}}" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-user"></span> Users</a><br><br>
-                          <a href="#" class="btn btn-info btn-lg" role="button"><span class="glyphicon glyphicon-file"></span> Notes</a><br><br>
+                          <a href="#" class="btn btn-info btn-lg" role="button"><span class="glyphicon glyphicon-file"></span> Categorias</a><br><br>
                           <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-picture"></span> Photos</a><br><br>
                           <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-tag"></span> Tags</a><br><br>
                         </div>

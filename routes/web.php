@@ -58,6 +58,6 @@ Route::get('/sobre', 'App\Http\Controllers\SobreController@index')->name('sobre'
 Route::get('/produtos/admins', 'App\Http\Controllers\ProdutosController@admins')->name('produtos.admins')->middleware('auth');
 //Users
 Route::get('/produtos/users', 'App\Http\Controllers\ProdutosController@users')->name('produtos.users')->middleware('auth');
-
 //Anuncios
 Route::get('/produtos/anuncios', 'App\Http\Controllers\ProdutosController@anuncios')->name('produtos.anuncios')->middleware('auth');
+
