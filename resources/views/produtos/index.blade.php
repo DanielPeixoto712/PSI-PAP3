@@ -49,7 +49,7 @@
 
         
         <div align="center">
-        <a href="{{route('produtos.create')}}"><button type="button" class="btn btn-outline-primary">Criar</button></a>
+        <a href="{{route('produtos.create')}}"><button type="button" class="btn btn-outline-primary">Anunciar</button></a>
         @if(session()->has('mensagem'))
                   <div class="alert alert-danger" role="alert">
                   {{session('mensagem')}}

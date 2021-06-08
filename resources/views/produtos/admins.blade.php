@@ -26,7 +26,7 @@
                     <div class="row">
                         <div class="col-xs-6 col-md-6">
                           <a href="{{route('produtos.anuncios')}}" class="btn btn-danger btn-lg" role="button"><span class="glyphicon glyphicon-list-alt"></span> Anuncios</a><br><br>
-                          <a href="" class="btn btn-warning btn-lg" role="button"><span class="glyphicon glyphicon-bookmark"></span> Marcas</a><br><br>
+                          <a href="{{route('marcas.marcas')}}" class="btn btn-warning btn-lg" role="button"><span class="glyphicon glyphicon-bookmark"></span> Marcas</a><br><br>
                           <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-signal"></span> Reports</a><br><br>
                           <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-comment"></span> Comments</a><br>
                         </div>

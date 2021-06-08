@@ -8,12 +8,12 @@
 
 @section ('menu')
 @endsection
-
+<h3 align="center">Tabela dos Anuncios</h3>
 @section ('produtos')
 
 
  <table border cellpadding= “1” cellpacing= “0” height =”200”>
- 	<h3>Tabela dos Anuncios</h3>
+ 	
  	<thead>
  		<tr>
 

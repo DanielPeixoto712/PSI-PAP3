@@ -25,6 +25,33 @@ class MarcasController extends Controller
 ]);
 }
 
+public function marcas(){
+     
+       $marca = Marca::all();
+  
+
+           return view('marcas.marcas',  ['marca'=>$marca
+]);
+ 
+
+   }
+
+public function create(){
+  $marca=Marca::all();
+ 
+    return view('marcas.create', ['marca'=>$marca]);
+}
+public function store(request $request){
+    $novaMarca=$request->validate ([
+        'marca'=>['required','max:100'],
+        
+
+]);
+
+    $marca=Marca::create($novaMarca);
+    return redirect()->route('marcas.marcas');
+}
+
 
 
 }

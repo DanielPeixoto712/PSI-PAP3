@@ -54,10 +54,14 @@ Route::get('/categorias/{id}/show', 'App\Http\Controllers\CategoriasController@s
 Route::get('/sobre', 'App\Http\Controllers\SobreController@index')->name('sobre')->middleware('auth');
 
 
-//Admins//
+//Admins//------
 Route::get('/produtos/admins', 'App\Http\Controllers\ProdutosController@admins')->name('produtos.admins')->middleware('auth');
 //Users
 Route::get('/produtos/users', 'App\Http\Controllers\ProdutosController@users')->name('produtos.users')->middleware('auth');
 //Anuncios
 Route::get('/produtos/anuncios', 'App\Http\Controllers\ProdutosController@anuncios')->name('produtos.anuncios')->middleware('auth');
+//Marcas
+Route::get('/marcas', 'App\Http\Controllers\MarcasController@marcas')->name('marcas.marcas')->middleware('auth');
+Route::get('/marcas/create', 'App\Http\Controllers\MarcasController@create')->name('marcas.create')->middleware('auth');
+Route::post('/marcas', 'App\Http\Controllers\MarcasController@store')->name('marcas.store')->middleware('auth');
 

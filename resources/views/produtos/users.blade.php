@@ -8,7 +8,7 @@
 
 @section ('menu')
 @endsection
-
+<h3 align="center">Tabela dos Users</h3>
 @section ('produtos')
  <table border cellpadding= “1” cellpacing= “0” height =”200”>
  	<thead>

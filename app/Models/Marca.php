@@ -20,4 +20,8 @@ class Marca extends Model
 
       return $this->hasMany('App\Models\Produto', 'id_produto');
     }
+
+
+
+
     }
