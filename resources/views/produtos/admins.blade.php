@@ -32,7 +32,7 @@
                         </div>
                         <div class="col-xs-6 col-md-6">
                           <a href="{{route('produtos.users')}}" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-user"></span> Users</a><br><br>
-                          <a href="#" class="btn btn-info btn-lg" role="button"><span class="glyphicon glyphicon-file"></span> Categorias</a><br><br>
+                          <a href="{{route('categorias.categorias')}}" class="btn btn-info btn-lg" role="button"><span class="glyphicon glyphicon-file"></span> Categorias</a><br><br>
                           <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-picture"></span> Photos</a><br><br>
                           <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-tag"></span> Tags</a><br><br>
                         </div>

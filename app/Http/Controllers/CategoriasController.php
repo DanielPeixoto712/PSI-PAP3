@@ -25,5 +25,33 @@ class CategoriasController extends Controller
 }
 
 
+public function categorias(){
+     
+       $categoria = Categoria::all();
+  
+
+           return view('categorias.categorias',  ['categoria'=>$categoria
+]);
+ 
+
+   }
+
+public function create(){
+  $categoria=Categoria::all();
+ 
+    return view('categorias.create', ['categoria'=>$categoria]);
+}
+public function store(request $request){
+    $novaCategoria=$request->validate ([
+        'designacao'=>['required','max:100'],
+        
+
+]);
+
+    $categoria=Categoria::create($novaCategoria);
+    return redirect()->route('categorias.categorias');
+}
+
+
 
 }

@@ -105,19 +105,7 @@
 <div style="background-color:#E6E6E6" align="center">
  <a href="{{route('produtos.index')}}" class="list-group-item">Produtos</a>
 
-       <!-- <div class="dropdown">
-  <button   data-toggle="dropdown">
-  <span class="caret"></span></button>
-  <ul class="dropdown-menu">
-@yield ('menu')
-    <li><a href="" class="list-group-item"></a></li>
-    <li><a href="" class="list-group-item">BMW</a></li>
-    <li><a href="" class="list-group-item">Honda</a></li>
-   
-    <li><a href="{{route('categorias.index')}}" class="list-group-item">Categorias</a></li>
-  </ul>
-</div>
--->
+       
 
 
 </div>

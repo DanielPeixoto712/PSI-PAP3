@@ -64,4 +64,8 @@ Route::get('/produtos/anuncios', 'App\Http\Controllers\ProdutosController@anunci
 Route::get('/marcas', 'App\Http\Controllers\MarcasController@marcas')->name('marcas.marcas')->middleware('auth');
 Route::get('/marcas/create', 'App\Http\Controllers\MarcasController@create')->name('marcas.create')->middleware('auth');
 Route::post('/marcas', 'App\Http\Controllers\MarcasController@store')->name('marcas.store')->middleware('auth');
+//Categorias
+Route::get('/categorias', 'App\Http\Controllers\CategoriasController@categorias')->name('categorias.categorias')->middleware('auth');
+Route::get('/categorias/create', 'App\Http\Controllers\CategoriasController@create')->name('categorias.create')->middleware('auth');
+Route::post('/categorias', 'App\Http\Controllers\CategoriasController@store')->name('categorias.store')->middleware('auth');
 
