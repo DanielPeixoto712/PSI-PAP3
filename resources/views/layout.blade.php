@@ -47,10 +47,11 @@
             <a class="nav-link" href="#">Contactos</a>
           </li>
 
+@if(Auth::user()->tipo_user=='admin')
           <li class="nav-item">
             <a class="nav-link" href="{{route('produtos.admins')}}">Admin</a>
           </li>
-         
+           @endif
 
         </ul>
           <!-- Right Side Of Navbar -->
