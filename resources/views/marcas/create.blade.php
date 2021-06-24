@@ -17,7 +17,7 @@
 
     Marca :<input type="text" name="marca" value="{{old('marca')}}"><br>
    
-   <input type="text" name="id"  value="{{Auth::user()->id}}"  style="display:none" />{{Auth::user()->id}} <br>
+   <input  type="text" name="id"  value="{{Auth::user()->id}}"  style="display:none"  />{{Auth::user()->id}} <br>
 
     <input type="submit" name="Enviar">
 </form>
@@ -26,3 +26,5 @@
 
 @section ('rodape')
 @endsection
+
+

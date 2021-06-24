@@ -170,6 +170,7 @@ public function anuncios (request $request){
 
 $produtos= Produto::all();
 
+
  return view('produtos.anuncios')->with('produtos', $produtos);
 
 }

@@ -104,7 +104,7 @@
 
 <!--Motores-->
 <div style="background-color:#E6E6E6" align="center">
- <a href="{{route('produtos.index')}}" class="list-group-item">Produtos</a>
+ <a href="{{route('produtos.index')}}" class="list-group-item">Anúncios</a>
 
        
 

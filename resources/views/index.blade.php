@@ -70,7 +70,7 @@
 
 <div class="col-md-3 offset-md-1">
 <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="img/bomp1.jpg" alt="Imagem de capa do card">
+  <img class="card-img-top" src="img/reca1.jpg" alt="Imagem de capa do card">
   <div class="card-body">
     <h5 class="card-title">Aqui encontra o motor que procura!</h5>
     <p class="card-text">Procure aqui!</p>
