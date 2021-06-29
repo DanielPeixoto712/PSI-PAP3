@@ -44,14 +44,16 @@
 
 
 
-
+  <h3>Anúncios em destaque</h3>
 <div class="row">
+
 <div class="col-md-3 offset-md-1">
           <div  class="card" style="width: 18rem;" >
-  <img class="card-img-top" src="img/susp2.jpg" alt="Imagem de capa do card">
+  <img class="card-img-top" src="img/B18.jpg" alt="Imagem de capa do card">
   <div class="card-body">
-    <h5 class="card-title">Temos vários volantes!</h5>
-    <p class="card-text">Para todos os gostos!</p>
+    <h5 class="card-title">Honda B18C4</h5>
+    <a href="http://localhost/produtos/19/show"><button type="button" class="btn btn-primary">Visitar</button></a>
+  
   </div>
 </div>
 </div>
@@ -59,10 +61,11 @@
 <div class="col-md-3 offset-md-1">
 
 <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="img/sparco1.jpg" alt="Imagem de capa do card">
+  <img class="card-img-top" src="img/RB26.jpg" alt="Imagem de capa do card">
   <div class="card-body">
-    <h5 class="card-title">Temos vários volantes!</h5>
-    <p class="card-text">Para todos os gostos!</p>
+    <h5 class="card-title">Nissan RB26</h5>
+    <a href="http://localhost/produtos/15/show"><button type="button" class="btn btn-primary">Visitar</button></a>
+    
    
   </div>
 </div>
@@ -70,10 +73,10 @@
 
 <div class="col-md-3 offset-md-1">
 <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="img/reca1.jpg" alt="Imagem de capa do card">
+  <img class="card-img-top" src="img/B16.jpg" alt="Imagem de capa do card">
   <div class="card-body">
-    <h5 class="card-title">Aqui encontra o motor que procura!</h5>
-    <p class="card-text">Procure aqui!</p>
+    <h5 class="card-title">Honda B16A2</h5>
+     <a href="http://localhost/produtos/18/show"><button type="button" class="btn btn-primary">Visitar</button></a>
     
   </div>
 </div>
