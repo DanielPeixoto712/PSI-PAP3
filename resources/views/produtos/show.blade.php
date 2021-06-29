@@ -76,8 +76,9 @@
 
 
 
-        <!-- /.card -->
+        
 
+        <!--
         <div class="card card-outline-secondary my-4">
           <div class="card-header">
              Avaliações do vendedor
@@ -95,7 +96,7 @@
             <a href="#" class="btn btn-success">Avaliar</a>
           </div>
         </div>
-        <!-- /.card -->
+       -->
 
       </div>
       <!-- /.col-lg-9 -->
