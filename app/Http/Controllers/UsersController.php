@@ -12,6 +12,7 @@ use App\Models\Categoria;
 use App\Models\User1;
 use App\Models\User;
 use App\Models\Anuncio;
+use App\Models\Report;
 
 class UsersController extends Controller
 {

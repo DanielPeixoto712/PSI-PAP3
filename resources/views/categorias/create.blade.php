@@ -17,7 +17,7 @@
 
     Categoria :<input type="text" name="designacao" value="{{old('designacao')}}"><br>
    
-   <input type="text" name="id"  value="{{Auth::user()->id}}"  style="display:none" />{{Auth::user()->id}} <br>
+   <input type="text" name="id"  value="{{Auth::user()->id}}"  style="display:none" /> <br>
 
     <input type="submit" name="Enviar">
 </form>

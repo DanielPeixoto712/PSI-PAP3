@@ -10,6 +10,7 @@ use App\Models\Marca;
 use App\Models\Categoria;
 use App\Models\User;
 use App\Models\Anuncio;
+use App\Models\Report;
 
 
 class ProdutosController extends Controller
@@ -173,6 +174,31 @@ $produtos= Produto::all();
 
  return view('produtos.anuncios')->with('produtos', $produtos);
 
+}
+
+public function create1(){
+  $report=Report::all();
+  $produtos=Produto::all();
+  $users=User::all();
+
+
+
+ 
+    return view('reports.create1', ['produtos'=>$produtos, 'users'=>$users]);
+}
+public function repo(request $request){
+    $novoReport=$request->validate ([
+        'id_produto'=>['required'],
+        'id'=>['required'],
+        'produto'=>['required'],
+        'report'=>['required'],
+        'vendedor'=>['required'],
+        
+
+]);
+
+    $report=Report::create($novoReport);
+  return redirect()->route('produtos.index')->with('mensagem','Anuncio denunciado com Sucesso! Iremos entrar em contacto com o vendedor. Obrigado!');;
 }
 
 }

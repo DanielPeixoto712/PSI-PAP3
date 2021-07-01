@@ -69,3 +69,6 @@ Route::get('/categorias', 'App\Http\Controllers\CategoriasController@categorias'
 Route::get('/categorias/create', 'App\Http\Controllers\CategoriasController@create')->name('categorias.create')->middleware('auth');
 Route::post('/categorias', 'App\Http\Controllers\CategoriasController@store')->name('categorias.store')->middleware('auth');
 
+//Reports
+Route::get('/produtos/create1', 'App\Http\Controllers\ProdutosController@create1')->name('produtos.create1')->middleware('auth');
+Route::post('/produtos/repo', 'App\Http\Controllers\ProdutosController@repo')->name('produtos.repo')->middleware('auth');

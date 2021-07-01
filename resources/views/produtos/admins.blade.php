@@ -37,14 +37,14 @@
                           <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-tag"></span> Tags</a><br><br>
                         </div>
                     </div>
+
                     <br>
-                    <a href="http://www.jquery2dotnet.com/" class="btn btn-success btn-lg btn-block" role="button"><span class="glyphicon glyphicon-globe"></span> Website</a>
+                    <a href="http://www.jquery2dotnet.com/" class="btn btn-success btn-lg btn-block" role="button"><span class="glyphicon glyphicon-globe"></span> Website</a><br><br>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 
 
 </div>
