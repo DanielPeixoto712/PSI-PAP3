@@ -201,4 +201,13 @@ public function repo(request $request){
   return redirect()->route('produtos.index')->with('mensagem','Anuncio denunciado com Sucesso! Iremos entrar em contacto com o vendedor. Obrigado!');;
 }
 
+public function reports (request $request){
+
+$reports= Report::all();
+
+
+ return view('produtos.reports')->with('reports', $reports);
+
+}
+
 }

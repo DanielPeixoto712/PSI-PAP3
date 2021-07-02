@@ -72,3 +72,4 @@ Route::post('/categorias', 'App\Http\Controllers\CategoriasController@store')->n
 //Reports
 Route::get('/produtos/create1', 'App\Http\Controllers\ProdutosController@create1')->name('produtos.create1')->middleware('auth');
 Route::post('/produtos/repo', 'App\Http\Controllers\ProdutosController@repo')->name('produtos.repo')->middleware('auth');
+Route::get('/produtos/reports', 'App\Http\Controllers\ProdutosController@reports')->name('produtos.reports')->middleware('auth');
