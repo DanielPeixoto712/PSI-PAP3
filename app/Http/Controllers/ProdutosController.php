@@ -176,9 +176,11 @@ $produtos= Produto::all();
 
 }
 
-public function create1(){
+public function create1(Request $request){
+$idProduto=$request->id;
+   $produtos=Produto::where('id_produto',$idProduto)->first();
+
   $report=Report::all();
-  $produtos=Produto::all();
   $users=User::all();
 
 
@@ -187,10 +189,11 @@ public function create1(){
     return view('reports.create1', ['produtos'=>$produtos, 'users'=>$users]);
 }
 public function repo(request $request){
+
     $novoReport=$request->validate ([
         'id_produto'=>['required'],
         'id'=>['required'],
-        'produto'=>['required'],
+        'id_produto'=>['required'],
         'report'=>['required'],
         'vendedor'=>['required'],
         
@@ -203,7 +206,8 @@ public function repo(request $request){
 
 public function reports (request $request){
 
-$reports= Report::all();
+$reports= Report::with('produto')->get();
+
 
 
  return view('produtos.reports')->with('reports', $reports);

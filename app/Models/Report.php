@@ -23,7 +23,7 @@ class Report extends Model
 
 public function produto (){
 
-      return $this->hasMany('App\Models\Produto', 'id_produto');
+      return $this->belongsTo('App\Models\Produto', 'id_produto');
     }
 
 public function users (){

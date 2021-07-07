@@ -346,6 +346,6 @@ $(document).ready(function(){
 
 <br>
 @section ('rodape')
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 @endsection
 

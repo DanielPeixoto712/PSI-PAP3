@@ -345,13 +345,12 @@ $(document).ready(function(){
 @endforeach					
 				</tbody>
 			</table>
-			
+			</div></div></div>
 
 </body>
 </html>
 
 @endsection
-<br>
 @section ('rodape')
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 @endsection

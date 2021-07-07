@@ -335,7 +335,7 @@ $(document).ready(function(){
 @endforeach					
 				</tbody>
 			</table>
-			
+			</div></div></div>
 
 </body>
 </html>
@@ -343,7 +343,7 @@ $(document).ready(function(){
 @endsection
 <br>
 @section ('rodape')
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 @endsection
 
 

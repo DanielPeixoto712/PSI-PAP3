@@ -13,23 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
 
-Route::get('/index', function () {
-    return view('index');
-});
 
 //HOME
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //INDEX
-Route::post('index','App\Http\Controllers\IndexController@index')->name('index')->middleware('auth');
+Route::get('/index','App\Http\Controllers\IndexController@index')->name('index')->middleware('auth');
+Route::get('/','App\Http\Controllers\IndexController@index')->name('index')->middleware('auth');
 
 
 
@@ -43,7 +38,7 @@ Route::get('/produtos/{id}/showMarca', 'App\Http\Controllers\ProdutosController@
 
 Route::get('/produtos/edit/{id}', 'App\Http\Controllers\ProdutosController@edit')->name('produtos.edit')->middleware('auth');
 Route::patch('/produtos', 'App\Http\Controllers\ProdutosController@update')->name('produtos.update')->middleware('auth');
-Route::get('/produtos/delete', 'App\Http\Controllers\ProdutosController@delete')->name('produtos.delete')->middleware('auth');
+Route::get('/produtos/delete/{id}', 'App\Http\Controllers\ProdutosController@delete')->name('produtos.delete')->middleware('auth');
 Route::delete('/produtos', 'App\Http\Controllers\ProdutosController@destroy')->name('produtos.destroy')->middleware('auth');
 
 //Categorias
@@ -70,6 +65,6 @@ Route::get('/categorias/create', 'App\Http\Controllers\CategoriasController@crea
 Route::post('/categorias', 'App\Http\Controllers\CategoriasController@store')->name('categorias.store')->middleware('auth');
 
 //Reports
-Route::get('/produtos/create1', 'App\Http\Controllers\ProdutosController@create1')->name('produtos.create1')->middleware('auth');
+Route::get('/produtos/create1/{id}', 'App\Http\Controllers\ProdutosController@create1')->name('produtos.create1')->middleware('auth');
 Route::post('/produtos/repo', 'App\Http\Controllers\ProdutosController@repo')->name('produtos.repo')->middleware('auth');
 Route::get('/produtos/reports', 'App\Http\Controllers\ProdutosController@reports')->name('produtos.reports')->middleware('auth');

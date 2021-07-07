@@ -301,11 +301,12 @@ $(document).ready(function(){
 						
 						<th>ID Report</th>
 						<th>ID Anuncio</th>
-						<th>ID Anunciante</th>
 						<th>Anuncio</th>
-						<th>Report</th>
-						<th>Anunciante</th>
-						<th>Report feito em:</th>
+						<th>ID Vendedor</th>
+						<th>ID Denunciante</th>
+						<th>Denuncia</th>
+						
+						<th>Denuncia feita em:</th>
 
 					</tr>
 				</thead>
@@ -321,10 +322,14 @@ $(document).ready(function(){
 						
 						<td>{{$u->id_report}}</td><br>
 						<td>{{$u->id_produto}}</td>
-						<td>{{$u->id}}</td>
-						<td>{{$u->produto}}</td>
-						<td>{{$u->report}}</td>
+						<td>
+							{{$u->produto->produto}}
+						</td>
 						<td>{{$u->vendedor}}</td>
+						<td>{{$u->id}}</td>
+						
+						<td>{{$u->report}}</td>
+						
 						<td>{{$u->created_at}}</td>
 						
 						
@@ -336,16 +341,16 @@ $(document).ready(function(){
 					</tr>
 @endforeach					
 				</tbody>
-			</table>
+			</table></div></div></div>
 			
 
 </body>
 </html>
 
 @endsection
-<br>
+
 @section ('rodape')
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 @endsection
 
 
