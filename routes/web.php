@@ -54,6 +54,7 @@ Route::get('/produtos/admins', 'App\Http\Controllers\ProdutosController@admins')
 //Users
 Route::get('/produtos/users', 'App\Http\Controllers\ProdutosController@users')->name('produtos.users')->middleware('auth');
 //Anuncios
+Route::delete('/produtos/anuncios', 'App\Http\Controllers\ProdutosController@destroy')->name('produtos.destroy')->middleware('auth');
 Route::get('/produtos/anuncios', 'App\Http\Controllers\ProdutosController@anuncios')->name('produtos.anuncios')->middleware('auth');
 //Marcas
 Route::get('/marcas', 'App\Http\Controllers\MarcasController@marcas')->name('marcas.marcas')->middleware('auth');

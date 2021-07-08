@@ -278,7 +278,7 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-<div class="container-xl">
+<div class="container-x1">
 	<div class="table-responsive">
 		<div class="table-wrapper">
 			<div class="table-title">
@@ -336,12 +336,22 @@ $(document).ready(function(){
 						<td>{{$u->users->email}}</td>
 						
 						
-						
+				
 						<td>
-							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+									
+							<!--<a href="{{route('produtos.delete',['id'=>$u->id_produto])}}" class="delete" data-toggle="modal"></a>-->
+							<form action="{{route('produtos.delete', ['id'=>$u->id_produto])}}" method="GET">
+   							 @csrf
+    						@method('delete')
+    	
+    						<button type="submit"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></button>
+							</form>
+
+					
 						</td>
+						
 					</tr>
+
 @endforeach					
 				</tbody>
 			</table>

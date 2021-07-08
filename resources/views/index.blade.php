@@ -96,9 +96,6 @@
     <!-- /.row -->
 
   </div>
-
-
-
 @endsection
 <br>
 @section ('rodape')

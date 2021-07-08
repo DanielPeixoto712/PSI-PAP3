@@ -168,11 +168,13 @@ $users= User::all();
 }
 
 public function anuncios (request $request){
+ $idProduto=$request->id;
 
 $produtos= Produto::all();
 
 
- return view('produtos.anuncios')->with('produtos', $produtos);
+
+ return view('produtos.anuncios', ['produtos'=>$produtos])->with('produtos', $produtos);
 
 }
 
@@ -213,5 +215,24 @@ $reports= Report::with('produto')->get();
  return view('produtos.reports')->with('reports', $reports);
 
 }
+
+
+
+
+
+public function editanuc (Request $request){
+    $idProduto=$request->id;
+   $produto=Produto::where('id_produto',$idProduto)->first();
+
+
+ 
+      return redirect()->route('produtos.index')->with('mensagem','Não tem permissão para editar este anuncio!');
+    
+ 
+}
+
+
+ 
+
 
 }
