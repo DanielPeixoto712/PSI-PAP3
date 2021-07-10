@@ -11,7 +11,7 @@
             <div class="card0">
 
           
-                    <form method="POST" action="{{ route('register') }}" onsubmit="event.preventDefault()" class="box">
+                    <form method="POST" action="{{ route('register') }}"  class="box">
                         @csrf
 
                         <div class="form-group row">
@@ -72,22 +72,23 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
-                        </div>
+                             </div>
+                                </div>
 
-                        <div class="form-group row">
-                            <label style="color: #ffffff" for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                                <div class="form-group row">
+                                <label style="color: #ffffff" for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
-                            <div class="col-md-6">
+                                <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
+                             </div>
+                                </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
+                             <div class="form-group row mb-0">
+                             <div class="col-md-6 offset-md-4">
+                                <input type="submit" value=" {{ __('Register') }}">
+
+
+
                             </div>
                         </div>
                     </form>

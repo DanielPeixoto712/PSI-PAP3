@@ -318,7 +318,7 @@ $(document).ready(function(){
 							</span>
 						</td>
 						
-						<td>{{$u->id}}</td><br>
+						<td>{{$u->id}}</td>
 						<td>{{$u->name}}</td>
 						<td>{{$u->contacto}}</td>
 						<td>{{$u->email}}</td>
@@ -328,12 +328,19 @@ $(document).ready(function(){
 						
 						
 						<td>
-							<a href=" " class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+							<button type="submit" class="btn btn-light" style="color: #C8A702"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></button>
+
+
+
+							
+
+
+
 							<form action="{{route('users.delete', ['id'=>$u->id])}}" method="GET">
    							 @csrf
     						@method('delete')
     	
-    						<button type="submit"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></button>
+    						<button type="submit" class="btn btn-light" style="color: red"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></button>
 							</form>
 						</td>
 					</tr>

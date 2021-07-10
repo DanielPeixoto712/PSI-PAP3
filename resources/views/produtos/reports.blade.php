@@ -320,7 +320,7 @@ $(document).ready(function(){
 							</span>
 						</td>
 						
-						<td>{{$u->id_report}}</td><br>
+						<td>{{$u->id_report}}</td>
 						<td>{{$u->id_produto}}</td>
 						<td>
 							{{$u->produto->produto}}
@@ -335,12 +335,13 @@ $(document).ready(function(){
 						
 						
 						<td>
-							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+							<button type="submit" class="btn btn-light" style="color: #C8A702"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></button>
+
 							<form action="{{route('reports.delete', ['id'=>$u->id_report])}}" method="GET">
    							 @csrf
     						@method('delete')
     	
-    						<button type="submit"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></button>
+    						<button type="submit" class="btn btn-light" style="color: red"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></button>
 							</form>
 						</td>
 					</tr>

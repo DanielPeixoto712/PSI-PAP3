@@ -91,10 +91,6 @@ public function edit (Request $request){
   $categorias=Categoria::all();
   $marcas=Marca::all();
   
- 
-
-  
-
 
    return view('produtos.edit',['produto'=>$produto, 'categorias'=>$categorias, 'marcas'=>$marcas]);
 
@@ -118,7 +114,7 @@ public function edit (Request $request){
         'observacoes'=>['nullable','min:2','max:20000000'],
         'info'=>['nullable','min:2','max:200'],
         'id'=>['nullable','required','min:1','max:50'],
-        'imagem_capa'=>['image','nullable','max:20000']
+        'imagem_capa'=>['image','nullable','max:20000'],
 ]);
    if($request->hasFile('imagem_capa')){
   $nomeimagem=$request->file('imagem_capa')->getClientOriginalName();
