@@ -52,6 +52,15 @@ public function store(request $request){
     return redirect()->route('marcas.marcas');
 }
 
+public function delete (request $request){
+   $idMarca=$request->id;
+   $marca=Marca::where('id_marca',$idMarca)->first();
+  $marca=Marca::findOrFail($idMarca);
+  $marca->delete();
+
+return redirect()->route('produtos.index')->with('mensagem','Marca Eliminada com Sucesso!');
+}
+
 
 
 }

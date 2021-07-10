@@ -61,7 +61,7 @@
 
                                 <button class="btn btn-outline-primary"> 
                                     <a href="{{ route('register') }}">
-                                    {{ __('Registar') }}</a>
+                                    {{ __('Register') }}</a>
                                 </button>
 
                                 @if (Route::has('password.request'))

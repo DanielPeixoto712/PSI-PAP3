@@ -53,5 +53,14 @@ public function store(request $request){
 }
 
 
+public function delete (request $request){
+   $idCategoria=$request->id;
+   $categoria=Categoria::where('id_categoria',$idCategoria)->first();
+  $categoria=Categoria::findOrFail($idCategoria);
+  $categoria->delete();
+
+return redirect()->route('produtos.index')->with('mensagem','Categoria Eliminada com Sucesso!');
+}
+
 
 }

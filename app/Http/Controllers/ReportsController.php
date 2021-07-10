@@ -23,4 +23,13 @@ class ReportsController extends Controller
        return view('reports');
 
    }
+
+   public function delete (request $request){
+   $idReport=$request->id;
+   $report=Report::where('id_report',$idReport)->first();
+  $report=Report::findOrFail($idReport);
+  $report->delete();
+
+return redirect()->route('produtos.index')->with('mensagem','Denúncia Eliminado com Sucesso!');
+}
 }
