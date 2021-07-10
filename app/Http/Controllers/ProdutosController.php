@@ -163,6 +163,7 @@ $users= User::all();
 
 }
 
+
 public function anuncios (request $request){
  $idProduto=$request->id;
 

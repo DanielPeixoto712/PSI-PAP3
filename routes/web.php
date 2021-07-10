@@ -59,6 +59,8 @@ Route::get('/produtos/admins', 'App\Http\Controllers\ProdutosController@admins')
 Route::get('/produtos/users', 'App\Http\Controllers\ProdutosController@users')->name('produtos.users')->middleware('auth');
 Route::get('/users/delete/{id}', 'App\Http\Controllers\UsersController@delete')->name('users.delete')->middleware('auth');
 Route::delete('/users', 'App\Http\Controllers\UsersController@destroy')->name('users.destroy')->middleware('auth');
+Route::get('/users/edit/{id}', 'App\Http\Controllers\UsersController@edit')->name('users.edit')->middleware('auth');
+Route::patch('/users', 'App\Http\Controllers\UsersController@update')->name('users.update')->middleware('auth');
 
 
 //Anuncios
@@ -72,7 +74,8 @@ Route::get('/marcas/create', 'App\Http\Controllers\MarcasController@create')->na
 Route::post('/marcas', 'App\Http\Controllers\MarcasController@store')->name('marcas.store')->middleware('auth');
 Route::get('/marcas/delete/{id}', 'App\Http\Controllers\MarcasController@delete')->name('marcas.delete')->middleware('auth');
 Route::delete('/marcas', 'App\Http\Controllers\MarcasController@destroy')->name('marcas.destroy')->middleware('auth');
-
+Route::get('/marcas/edit/{id}', 'App\Http\Controllers\MarcasController@edit')->name('marcas.edit')->middleware('auth');
+Route::patch('/marcas', 'App\Http\Controllers\MarcasController@update')->name('marcas.update')->middleware('auth');
 
 //Categorias
 Route::get('/categorias', 'App\Http\Controllers\CategoriasController@categorias')->name('categorias.categorias')->middleware('auth');

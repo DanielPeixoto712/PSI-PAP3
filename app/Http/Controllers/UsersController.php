@@ -32,8 +32,39 @@ class UsersController extends Controller
 
 return redirect()->route('produtos.index')->with('mensagem','User Eliminado com Sucesso!');
 }
-    
 
+
+
+
+   public function edit (Request $request){
+   $idUser=$request->id;
+   $user=User::where('id',$idUser)->first();
+   $user=User::findOrFail($idUser);
+  
+  
+  
+
+   return view('produtos.users')->with('mensagem','User Editado com Sucesso!');
+ }
+ 
+
+
+   public function update(Request $request){
+   $idUser=$request->id;
+   $user=User::findOrfail($idUser);
+
+
+   $atualizarUser=$request->validate([
+    'name'=>['required', 'min:3', 'max:100'],
+    'email'=>['required', 'min:3', 'max:120'],
+    'password'=>['required', 'min:8'],
+    'tipo_user'=>['required', 'min:8'],
+    'contacto'=>['required', 'min:8'],
+]);
+   $user->update($atualizarUser);
+
+  return redirect()->route('produtos.users');
+}
     
  
 

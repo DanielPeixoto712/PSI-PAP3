@@ -38,10 +38,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('sobre')}}">Sobre</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Serviços</a>
+            <a class="nav-link" href="{{route('sobre')}}">Sobre Nós</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Contactos</a>

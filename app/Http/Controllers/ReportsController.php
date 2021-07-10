@@ -32,4 +32,6 @@ class ReportsController extends Controller
 
 return redirect()->route('produtos.index')->with('mensagem','Denúncia Eliminado com Sucesso!');
 }
+
+
 }

@@ -61,6 +61,32 @@ public function delete (request $request){
 return redirect()->route('produtos.index')->with('mensagem','Marca Eliminada com Sucesso!');
 }
 
+public function edit (Request $request){
+   $idMarca=$request->id;
+   $marca=Marca::where('id_marca',$idMarca)->first();
+   $marca=Marca::findOrFail($idMarca);
+  
+  
+  
+
+   return view('marcas.marcas')->with('mensagem','Marca Editada com Sucesso!');
+ }
+ 
+
+
+   public function update(Request $request){
+   $idMarca=$request->id;
+   $marca=Marca::findOrfail($idMarca);
+
+
+   $atualizarReport=$request->validate([
+    'marca'=>['required', 'min:3', 'max:100'],
+    
+]);
+   $marca->update($atualizarMarca);
+
+  return redirect()->route('marcas.marcas');
+}
 
 
 }
