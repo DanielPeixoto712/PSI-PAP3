@@ -5,7 +5,7 @@
 
 @section ('navbar')
 @endsection
-
+<br><br>
 @section ('menu')
 
 @foreach($marca as $marca)
@@ -106,6 +106,7 @@
 @endsection
 
 @section ('rodape')
+<br><br><br><br><br><br><br><br>
 @endsection
 
 

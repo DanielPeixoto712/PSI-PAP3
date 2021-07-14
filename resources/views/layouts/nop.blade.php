@@ -1,4 +1,4 @@
-  
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +19,9 @@
 
   <!-- Custom styles for this template -->
   <link href="css/shop-homepage.css" rel="stylesheet">
+
    <link href="{{ URL::asset('css/layout.css') }}" rel="stylesheet">
+
 </head>
 
 <body>
@@ -31,7 +33,7 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
+      <div  class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           
            
@@ -85,35 +87,12 @@
   </nav>
 
 
-  <!-- Page Content -->
-  <div class="container">
+<div class="container" >
 
     <div class="row">
 
-      <div class="col-lg-3">
+      <div class="col-md-5" >
 
-          <a href="{{route('index')}}"><img src="img/logo2.png" height="82px"></a>
-        <div class="list-group">
-
-          
-  <!--@yield ('menu')-->        
-
-
-<!--Motores-->
-<div style="background-color:#E6E6E6" align="center">
-
- <a href="{{route('produtos.index')}}" class="list-group-item">Anúncios</a>
-
-       
-
-
-</div>
-
-
-
-          
-
-        </div>
 
       </div>
       <!-- /.col-lg-3 -->
@@ -124,11 +103,12 @@
 
   <!-- Footer -->
 </div></div>
+
   @yield('rodape')
-  <div class="py-5 bg-dark">
+  <div class="py-5 bg-dark" >
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; Auto Parts 2021</p>
-    </div>
+    </div >
     <!-- /.container -->
   </div>
 

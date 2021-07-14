@@ -15,7 +15,7 @@
 
   <!-- Custom styles for this template -->
   <link href="css/shop-item.css" rel="stylesheet">
-
+   <link href="{{ URL::asset('css/layout.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -105,12 +105,12 @@
   <!-- /.container -->
 
   <!-- Footer -->
-  <footer class="py-5 bg-dark">
+  <div class="py-5 bg-dark">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
     </div>
     <!-- /.container -->
-  </footer>
+  </div>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>

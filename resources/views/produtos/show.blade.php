@@ -1,4 +1,4 @@
-@extends('layout')
+@extends ('layouts.nop')
 <br><br><br>
 <link href=" {{ URL::asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 

@@ -50,6 +50,9 @@ Route::get('/categorias/{id}/show', 'App\Http\Controllers\CategoriasController@s
 //Sobre
 Route::get('/sobre', 'App\Http\Controllers\SobreController@index')->name('sobre')->middleware('auth');
 
+//Contactos
+Route::get('/contactos', 'App\Http\Controllers\ContactosController@index')->name('contactos')->middleware('auth');
+
 
 //Admins//------
 Route::get('/produtos/admins', 'App\Http\Controllers\ProdutosController@admins')->name('produtos.admins')->middleware('auth');

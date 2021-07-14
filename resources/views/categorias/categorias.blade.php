@@ -1,8 +1,8 @@
-@extends ('layout')
+@extends ('layouts.nop')
 
 @section ('titulo')
 @endsection
- <br><br><br><br><br><br><br>
+ <br><br>
 @section ('navbar')
 @endsection
 
