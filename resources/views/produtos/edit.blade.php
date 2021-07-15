@@ -16,9 +16,10 @@
 
  
 
-<form action="{{route('produtos.update')}}" enctype="multipart/form-data" method="get">
+<form action="{{route('produtos.update', ['id'=>$produto->id_produto])}}"   enctype="multipart/form-data" method="post">
    @csrf
 @method('patch')
+
     Escolha a Categoria:
     <select name="id_categoria">
         @foreach($categorias as $categoria)

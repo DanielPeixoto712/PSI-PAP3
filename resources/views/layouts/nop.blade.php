@@ -105,12 +105,7 @@
 </div></div>
 
   @yield('rodape')
-  <div class="py-5 bg-dark" >
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Auto Parts 2021</p>
-    </div >
-    <!-- /.container -->
-  </div>
+ 
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>

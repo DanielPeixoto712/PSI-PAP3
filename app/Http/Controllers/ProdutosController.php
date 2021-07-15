@@ -99,37 +99,40 @@ public function edit (Request $request){
       return redirect()->route('produtos.index')->with('mensagem','Não tem permissão para editar este anuncio!');
     }
  
-}
+    }
 
 
    public function update(Request $request){
-   $idProduto=$request->id;
-   $produto=Produto::findOrfail($idProduto);
-   $imagemantiga=$produto->imagem_capa;
-   $atualizarProduto=$request->validate([
+
+        $idProduto=$request->id;
+        $produto=Produto::findOrfail($idProduto);
+        $imagemantiga=$produto->imagem_capa;
+        $atualizarProduto=$request->validate([
        'id_categoria'=>['required','max:100'],
         'id_marca'=>['required','max:100'],
         'preco'=>['nullable','min:2','max:10000000'],
         'produto'=>['nullable','min:2','max:200'],
         'observacoes'=>['nullable','min:2','max:20000000'],
         'info'=>['nullable','min:2','max:200'],
-        'id'=>['nullable','required','min:1','max:50'],
+  
         'imagem_capa'=>['image','nullable','max:20000'],
-]);
-   if($request->hasFile('imagem_capa')){
-  $nomeimagem=$request->file('imagem_capa')->getClientOriginalName();
-  $nomeimagem=time().'_'.$nomeimagem;
-  $guardarimagem=$request->file('imagem_capa')->storeAs('imagens/produtos',$nomeimagem);
-if(!is_null($imagemantiga)){
-  Storage::Delete('imagens/produtos'.$imagemantiga);
-}
+        ]);
+        
+        if($request->hasFile('imagem_capa')){
 
-  $atualizarproduto['imagem_capa']=$nomeimagem;
-}
-   $produto->update($atualizarProduto);
+        $nomeimagem=$request->file('imagem_capa')->getClientOriginalName();
+        $nomeimagem=time().'_'.$nomeimagem;
+        $guardarimagem=$request->file('imagem_capa')->storeAs('imagens/produtos',$nomeimagem);
+        if(!is_null($imagemantiga)){
+        Storage::Delete('imagens/produtos'.$imagemantiga);
+        }
 
-  return redirect()->route('produtos.show', ['id'=>$produto->id_produto
-]);
+        $atualizarproduto['imagem_capa']=$nomeimagem;
+        }
+        $produto->update($atualizarProduto);
+
+      return redirect()->route('produtos.show', ['id'=>$produto->id_produto
+  ]);
 }
 
 

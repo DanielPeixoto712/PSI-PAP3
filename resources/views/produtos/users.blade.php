@@ -331,13 +331,9 @@ $(document).ready(function(){
 
 						<td>
 						
-							<form action="{{route('users.edit', ['id'=>$u->id])}}" method="GET">
-   							 @csrf
-    						@method('edit')
-
-							<button type="submit" class="btn btn-light" style="color: #C8A702"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></button>
-						</form>
-
+						
+						
+						
 
 							
 

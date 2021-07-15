@@ -325,7 +325,7 @@ $(document).ready(function(){
 						
 							
 						<td>
-							<form action="{{route('marcas.edit', ['id'=>$m>->id_marca])}}" method="GET">
+							<form action="{{route('marcas.edit', ['id'=>$u->id_marca])}}" method="GET">
    							 @csrf
     						@method('edit')
 
