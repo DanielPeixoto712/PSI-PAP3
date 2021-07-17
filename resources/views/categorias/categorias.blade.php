@@ -326,7 +326,7 @@ $(document).ready(function(){
 						
 						
 						<td>
-							<button type="submit" class="btn btn-light" style="color: #C8A702"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></button>
+						
 							<form action="{{route('categorias.delete', ['id'=>$u->id_categoria])}}" method="GET">
    							 @csrf
     						@method('delete')

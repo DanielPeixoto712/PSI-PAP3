@@ -76,8 +76,7 @@ Route::get('/marcas/create', 'App\Http\Controllers\MarcasController@create')->na
 Route::post('/marcas', 'App\Http\Controllers\MarcasController@store')->name('marcas.store')->middleware('auth');
 Route::get('/marcas/delete/{id}', 'App\Http\Controllers\MarcasController@delete')->name('marcas.delete')->middleware('auth');
 Route::delete('/marcas', 'App\Http\Controllers\MarcasController@destroy')->name('marcas.destroy')->middleware('auth');
-Route::get('/marcas/edit/{id}', 'App\Http\Controllers\MarcasController@edit')->name('marcas.edit')->middleware('auth');
-Route::patch('/marcas', 'App\Http\Controllers\MarcasController@update')->name('marcas.update')->middleware('auth');
+
 
 //Categorias
 Route::get('/categorias', 'App\Http\Controllers\CategoriasController@categorias')->name('categorias.categorias')->middleware('auth');
