@@ -1,5 +1,4 @@
-@extends ('layout')
-
+@extends ('layouts.nop')
 @section ('titulo')
 @endsection
 
